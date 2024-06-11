@@ -1,3 +1,5 @@
+https://code.jquery.com/jquery-3.4.1.min.js
+
 //lista de variaveis:
 
 //variaveis das barras 
@@ -131,10 +133,21 @@ setInterval(()=>{
 
     //verificador da vida
    if (vida>10) {
-    window.alert("Vc perdeu");
+    //window.alert("Vc perdeu");
     vida = 0;
-    console.log(vida);
-    window.location.href="../php/index.php";
+    var dados = JSON.stringify(p);
+    $.ajax({
+        url: '../php/salvar.php',
+        type: 'POST',
+        data: {data: dados},
+        success: function(result){
+            console.log('sucesso');
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log('erro');
+        }
+    })
+    //window.location.href="../php/salvar.php";
    }
    
     //atualiza o contador da tela a cada 1 segundo

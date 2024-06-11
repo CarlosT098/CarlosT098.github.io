@@ -15,7 +15,7 @@
             <h1 class="marcador">Combo</h1>
             <h1 id="cont">0</h1>
             <h1>Pontuação</h1>
-            <h1 id="point">0</h1>
+            <h1 id="point" name = "pontuacao">0</h1>
             <button id="f" class="botao" onclick="press(2)">F</button>
             <button id="j" class="botao" onclick="press(3)">J</button>
             <button id="k" class="botao" onclick="press(4)">K</button>
